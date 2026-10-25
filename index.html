@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a090d">
+  <meta name="description" content="Nandhu Designzzz — graphic design, branding, posters, invitations and mobile UI concepts from Sivakasi, Tamil Nadu.">
+  <title>Nandhu Designzzz | Creative Portfolio</title>
+  <style>
+    :root{--bg:#0a090d;--panel:#141119;--text:#f8f5fc;--muted:#aaa2b5;--purple:#c084fc;--gold:#e8bd63;--line:rgba(255,255,255,.11)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{background:var(--bg);color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .ambient{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden;background:radial-gradient(ellipse at 18% 12%,rgba(145,65,211,.15),transparent 38%),radial-gradient(ellipse at 85% 55%,rgba(215,160,64,.08),transparent 34%),var(--bg)}
+    .ambient:after{content:"";position:absolute;width:380px;height:380px;border:1px solid rgba(192,132,252,.12);border-radius:50%;right:-160px;top:18%;box-shadow:0 0 0 45px rgba(192,132,252,.025),0 0 0 90px rgba(192,132,252,.02)}
+    .nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:20px 7%;background:rgba(10,9,13,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .brand{font-size:17px;font-weight:850;letter-spacing:1.5px}.brand span{color:var(--purple)}
+    .nav-links{display:flex;gap:28px;align-items:center}.nav-links a{font-size:13px;color:#d4cedb;transition:color .25s}.nav-links a:hover{color:var(--purple)}
+    .nav-cta{padding:10px 15px;border:1px solid rgba(192,132,252,.45);border-radius:30px!important;color:#e5c8ff!important}
+    .hero{min-height:88vh;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;padding:90px 9% 100px;position:relative}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(192,132,252,.3);background:rgba(192,132,252,.07);color:#d9b4ff;padding:9px 13px;border-radius:30px;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:25px}
+    .eyebrow:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--purple);box-shadow:0 0 12px var(--purple)}
+    h1{font-size:clamp(46px,7vw,88px);line-height:.99;letter-spacing:-4px;margin-bottom:25px;font-weight:850}h1 .accent{background:linear-gradient(100deg,#f2d6ff 0%,#c084fc 48%,#e8bd63 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-copy{max-width:590px;color:var(--muted);font-size:16px;line-height:1.9}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border-radius:10px;font-size:13px;font-weight:750;transition:transform .25s,box-shadow .25s}.btn:hover{transform:translateY(-3px)}.btn-primary{background:linear-gradient(115deg,#d9a5ff,#b76bfa);color:#180d20;box-shadow:0 8px 35px rgba(192,132,252,.2)}.btn-secondary{border:1px solid var(--line);background:rgba(255,255,255,.035)}
+    .hero-visual{min-height:430px;display:grid;place-items:center;position:relative;perspective:1000px}.orbit{position:absolute;width:min(390px,90%);aspect-ratio:1;border:1px solid rgba(232,189,99,.25);border-radius:50%;box-shadow:0 0 0 25px rgba(232,189,99,.025),0 0 0 60px rgba(192,132,252,.025);animation:orbit 28s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 20px var(--gold)}.orbit:before{top:12%;left:18%}.orbit:after{right:7%;bottom:24%;background:var(--purple);box-shadow:0 0 20px var(--purple)}
+    .hero-logo{position:relative;width:min(330px,76%);aspect-ratio:1;display:grid;place-items:center;transform-style:preserve-3d;animation:float 6s ease-in-out infinite}.hero-logo img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 24px 30px rgba(0,0,0,.6));mix-blend-mode:screen}.hero-logo:after{content:"";position:absolute;inset:14%;border-radius:50%;border:1px solid rgba(232,189,99,.22);transform:translateZ(-20px)}
+    .float-label{position:absolute;padding:12px 15px;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(20,17,25,.82);backdrop-filter:blur(12px);font-size:11px;color:#e5dced;box-shadow:0 15px 40px rgba(0,0,0,.22)}.float-label strong{display:block;color:var(--gold);font-size:13px;margin-bottom:3px}.label-one{top:14%;right:0;animation:float 5s ease-in-out infinite}.label-two{bottom:14%;left:0;animation:float 5.5s ease-in-out infinite reverse}
+    section.content{padding:90px 8%}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:38px}.kicker{color:var(--purple);text-transform:uppercase;letter-spacing:2.5px;font-size:11px;font-weight:800;margin-bottom:12px}.section-head h2,.center-title{font-size:clamp(30px,4vw,48px);letter-spacing:-1.7px}.section-head h2 span,.center-title span{color:var(--purple)}.section-desc{max-width:420px;color:var(--muted);line-height:1.8;font-size:14px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:stretch}.about-panel{padding:30px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015))}.about-panel h3{font-size:23px;margin-bottom:15px}.about-panel p{color:var(--muted);line-height:1.9;font-size:14px}.skill-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.skill{font-size:12px;color:#e1c5ff;border:1px solid rgba(192,132,252,.22);background:rgba(192,132,252,.07);padding:10px 13px;border-radius:8px}
+    .projects-section{background:linear-gradient(180deg,transparent,rgba(30,19,40,.55),transparent)}.projects-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.project-card{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.1);border-radius:17px;background:#141119;opacity:0;transform:translateY(35px) scale(.985);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.75,.25,1),border-color .35s,box-shadow .35s;isolation:isolate}.project-card.visible{opacity:1;transform:translateY(0) scale(1)}.project-card:hover{border-color:rgba(192,132,252,.65);box-shadow:0 22px 55px rgba(0,0,0,.35),0 0 30px rgba(192,132,252,.08)}.project-media{height:270px;overflow:hidden;background:#211b28;position:relative}.project-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 65%,rgba(10,9,13,.3));pointer-events:none}.project-media img{width:100%;height:115%;object-fit:cover;object-position:center;display:block;transform:translate3d(0,var(--py,0px),0) scale(1.015);transition:transform .45s ease;will-change:transform}.project-card:hover .project-media img{transform:translate3d(0,var(--py,0px),0) scale(1.06)}.project-info{padding:22px}.project-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:13px}.tag{font-size:10px;letter-spacing:1.2px;color:#dfbdff;text-transform:uppercase}.project-no{font-size:11px;color:#736b7b}.project-info h3{font-size:20px;margin-bottom:9px}.project-info p{font-size:13px;line-height:1.75;color:var(--muted)}
+    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.process-card{padding:25px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}.process-card .step{font-size:12px;color:var(--gold);margin-bottom:18px;letter-spacing:1px}.process-card h3{margin-bottom:10px}.process-card p{font-size:13px;color:var(--muted);line-height:1.8}
+    .contact-box{position:relative;overflow:hidden;padding:55px 30px;text-align:center;border:1px solid rgba(192,132,252,.23);border-radius:22px;background:radial-gradient(ellipse at 50% 0%,rgba(192,132,252,.16),transparent 65%),#131019}.contact-box h2{font-size:clamp(32px,5vw,55px);letter-spacing:-2px;margin-bottom:15px}.contact-box p{color:var(--muted);line-height:1.8;margin:0 auto;max-width:550px}.contact-box .btn{margin-top:25px}
+    footer{padding:25px 8%;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#81798a;font-size:12px}footer strong{color:#d9c7e8}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}@keyframes orbit{to{transform:rotate(360deg)}}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center;padding-top:75px}.hero-copy{margin:auto}.hero-actions{justify-content:center}.hero-visual{min-height:390px}.projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{align-items:start;flex-direction:column}.about-grid{grid-template-columns:1fr}}
+    @media(max-width:600px){.nav{padding:17px 5%;align-items:flex-start;gap:16px;flex-direction:column}.nav-links{width:100%;gap:17px;overflow-x:auto;padding-bottom:2px}.nav-links a{white-space:nowrap;font-size:12px}.nav-cta{display:none}.hero{min-height:auto;padding:75px 6% 65px;gap:25px}h1{letter-spacing:-2.4px}.hero-copy{font-size:14px}.hero-visual{min-height:320px}.orbit{width:260px}.hero-logo{width:230px}.float-label{font-size:10px;padding:10px}.label-one{right:-2px;top:9%}.label-two{left:-2px;bottom:7%}section.content{padding:65px 6%}.projects-grid,.process-grid{grid-template-columns:1fr}.project-media{height:300px}.section-head h2,.center-title{letter-spacing:-1px}.contact-box{padding:40px 20px}footer{padding:22px 6%}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.project-card,.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="#home">NANDHU <span>DESIGNZZZ</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#work">My Work</a><a href="#process">Process</a><a class="nav-cta" href="#contact">Let's Connect ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <div class="eyebrow">Creative designer · Sivakasi, TN</div>
+        <h1>Ideas into<br><span class="accent">visual impact.</span></h1>
+        <p class="hero-copy">Hi, I'm Nandhu — a graphic designer and aspiring UI/UX designer. I create modern visuals, brand identities, posters, invitations and mobile app interfaces.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#work">Explore my work <span>↘</span></a><a class="btn btn-secondary" href="#contact">Let's work together ↗</a></div>
+      </div>
+      <div class="hero-visual" aria-label="Veera Fashions logo artwork">
+        <div class="orbit" data-parallax="0.025"></div>
+        <div class="hero-logo" data-parallax="0.045"><img src="images/veera-logo.png" alt="Veera Fashions black and gold logo"></div>
+        <div class="float-label label-one"><strong>Creative thinking</strong>Built with intention</div>
+        <div class="float-label label-two"><strong>Design portfolio</strong>Graphic · Brand · UI/UX</div>
+      </div>
+    </section>
+
+    <section class="content" id="about">
+      <div class="section-head reveal"><div><div class="kicker">A little about me</div><h2>Design with a <span>purpose.</span></h2></div><p class="section-desc">I enjoy turning simple ideas into thoughtful visuals that help a brand or product stand out.</p></div>
+      <div class="about-grid">
+        <article class="about-panel reveal"><h3>Hey, I'm Nandhu 👋</h3><p>I'm learning and building my design skills through hands-on projects. From bold promotional posters to clean mobile interfaces, I focus on visual balance, clear communication and memorable details.</p></article>
+        <article class="about-panel reveal"><h3>Tools & skills</h3><p>My current toolkit for creating visual and digital experiences.</p><div class="skill-list"><span class="skill">Canva</span><span class="skill">Figma</span><span class="skill">Logo Design</span><span class="skill">Poster Design</span><span class="skill">Brand Identity</span><span class="skill">Mobile UI</span><span class="skill">HTML</span><span class="skill">CSS</span></div></article>
+      </div>
+    </section>
+
+    <section class="content projects-section" id="work">
+      <div class="section-head reveal"><div><div class="kicker">Selected projects</div><h2>Some things I've <span>created.</span></h2></div><p class="section-desc">A collection of design practice projects. Scroll to explore the gallery and hover over a card to see the artwork move.</p></div>
+      <div class="projects-grid">
+        <article class="project-card"><div class="project-media"><img src="images/veera-logo.png" alt="Veera Fashions gold crest logo" class="parallax-img"></div><div class="project-info"><div class="project-meta"><span class="tag">Logo design</span><span class="project-no">01 / 06</span></div><h3>Veera Fashions</h3><p>A bold black-and-gold emblem concept with a premium feel.</p></div></article>
+        <article class="project-card"><div class="project-media"><img src="images/fried-rice.png" alt="Orange fried rice promotional poster" class="parallax-img"></div><div class="project-info"><div class="project-meta"><span class="tag">Poster design</span><span class="project-no">02 / 06</span></div><h3>Food Promotion</h3><p>A vibrant food poster using bold typography and a strong product visual.</p></div></article>
+        <article class="project-card"><div class="project-media"><img src="images/business-card.png" alt="Minimal company business card design" class="parallax-img"></div><div class="project-info"><div class="project-meta"><span class="tag">Business design</span><span class="project-no">03 / 06</span></div><h3>Business Card</h3><p>A clean corporate layout concept with simple contact information styling.</p></div></article>
+        <article class="project-card"><div class="project-media"><img src="images/wedding-invitation.png" alt="Traditional Aadhi and Nila wedding invitation designs" class="parallax-img"></div><div class="project-info"><div class="project-meta"><span class="tag">Invitation design</span><span class="project-no">04 / 06</span></div><h3>Aadhi & Nila</h3><p>A traditional wedding invitation concept with warm gold and maroon tones.</p></div></article>
+        <article class="project-card"><div class="project-media"><img src="images/habitly-ui.png" alt="Habitly habit tracker mobile app UI designed in Figma" class="parallax-img"></div><div class="project-info"><div class="project-meta"><span class="tag">Mobile app UI</span><span class="project-no">05 / 06</span></div><h3>Habitly App</h3><p>A habit-tracking app interface concept designed in Figma.</p></div></article>
+        <article class="project-card"><div class="project-media"><img src="images/grand-opening.png" alt="Veera Fashions black and gold grand opening invitation" class="parallax-img"></div><div class="project-info"><div class="project-meta"><span class="tag">Branding</span><span class="project-no">06 / 06</span></div><h3>Grand Opening</h3><p>A luxury-style opening announcement concept for a fashion brand.</p></div></article>
+      </div>
+    </section>
+
+    <section class="content" id="process">
+      <div class="section-head reveal"><div><div class="kicker">How I approach a project</div><h2>Simple steps. <span>Strong visuals.</span></h2></div></div>
+      <div class="process-grid">
+        <article class="process-card reveal"><div class="step">STEP 01</div><h3>Understand</h3><p>Start with the idea, audience and purpose of the design.</p></article>
+        <article class="process-card reveal"><div class="step">STEP 02</div><h3>Design</h3><p>Explore layout, typography, colour and visual direction.</p></article>
+        <article class="process-card reveal"><div class="step">STEP 03</div><h3>Refine</h3><p>Polish the details and prepare the design for presentation.</p></article>
+      </div>
+    </section>
+
+    <section class="content" id="contact">
+      <div class="contact-box reveal"><div class="kicker">Have an idea?</div><h2>Let's make it <span style="color:var(--purple)">stand out.</span></h2><p>Interested in a poster, logo, invitation or UI concept? Connect with me on Instagram to talk about your project.</p><a class="btn btn-primary" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Find me on Instagram ↗</a></div>
+    </section>
+  </main>
+  <footer><span>© 2026 <strong>Nandhu Designzzz</strong>. All rights reserved.</span><span>Made with creativity · Sivakasi, Tamil Nadu</span></footer>
+
+  <script>
+    // Reveal sections and project cards when they enter the viewport.
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal, .project-card').forEach((el) => revealObserver.observe(el));
+
+    // Lightweight scroll parallax for project images and hero artwork.
+    const parallaxItems = document.querySelectorAll('.parallax-img, [data-parallax]');
+    let scheduled = false;
+    function updateParallax() {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduceMotion) return;
+      const viewportCenter = window.innerHeight / 2;
+      parallaxItems.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.bottom < -100 || rect.top > window.innerHeight + 100) return;
+        const strength = el.hasAttribute('data-parallax') ? Number(el.dataset.parallax) : 0.035;
+        const offset = (rect.top + rect.height / 2 - viewportCenter) * -strength;
+        if (el.classList.contains('parallax-img')) {
+          el.style.setProperty('--py', `${offset}px`);
+        } else {
+          el.style.translate = `0 ${offset}px`;
+        }
+      });
+      scheduled = false;
+    }
+    function requestParallax() {
+      if (!scheduled) {
+        window.requestAnimationFrame(updateParallax);
+        scheduled = true;
+      }
+    }
+    window.addEventListener('scroll', requestParallax, { passive: true });
+    window.addEventListener('resize', requestParallax);
+    updateParallax();
+  </script>
+</body>
+</html>
